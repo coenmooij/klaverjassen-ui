@@ -1,1 +1,22 @@
-<h1>Home</h1>
+<h1>Klaverjassen</h1>
+<hr>
+
+<h3>Continue Game</h3>
+<p>Jump back in and continue where you left off!</p>
+<app-button
+  *ngIf="hasActiveGame"
+  icon="play"
+  [isOrange]="true"
+  [route]="playGameRoute">
+  Continue Game
+</app-button>
+<hr>
+
+<h3>Start New Game</h3>
+<br>
+<app-button [route]="createGameRoute" icon="plus">
+  New Game
+</app-button>
+<hr>
+
+<h3>Game History</h3>

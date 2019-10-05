@@ -1,0 +1,8 @@
+<div class="form-group">
+  <input
+    class="form-control"
+    [appAutoFocus]="hasFocus"
+    [placeholder]="placeholder"
+    [ngModel]="value"
+    (ngModelChange)="onValueChange($event)">
+</div>

@@ -1,3 +1,5 @@
 export enum Routes {
-  HOME = '/'
+  HOME = '/',
+  CREATE_GAME = 'games/create',
+  PLAY_GAME = 'games/play'
 }

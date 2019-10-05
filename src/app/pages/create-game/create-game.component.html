@@ -1,0 +1,47 @@
+<app-card title="Wie spelen er?" subtitle="In volgorde van troef maken (met de klok mee)">
+  <app-input
+    placeholder="Speler 1"
+    [hasFocus]="focus === 1"
+    [(value)]="playerOne"
+    (keydown.enter)="focus = 2">
+  </app-input>
+  <app-input
+    placeholder="Speler 2"
+    [hasFocus]="focus === 2"
+    [(value)]="playerTwo"
+    (keydown.enter)="focus = 3">
+  </app-input>
+  <app-input
+    placeholder="Speler 3"
+    [hasFocus]="focus === 3"
+    [(value)]="playerThree"
+    (keydown.enter)="focus = 4">
+  </app-input>
+  <app-input
+    placeholder="Speler 4"
+    [hasFocus]="focus === 4"
+    [(value)]="playerFour"
+    (keydown.enter)="onSubmit()">
+  </app-input>
+
+  <hr>
+
+  <strong>Team 1:</strong>
+  {{ playerOne ? playerOne : 'Speler 1' }} &
+  {{ playerThree ? playerThree : 'Speler 3' }}
+  <br>
+  <strong>Team 2:</strong>
+  {{ playerTwo ? playerTwo : 'Speler 2' }} &
+  {{ playerFour ? playerFour : 'Speler 4' }}
+
+  <hr>
+
+  <app-bar [alignRight]="true">
+    <app-button class="mr-2" icon="refresh" [route]="cancelRoute" [isRed]="true">
+      Cancel
+    </app-button>
+    <app-button icon="play" [disabled]="!isComplete()" (click)="onSubmit()">
+      Start Game
+    </app-button>
+  </app-bar>
+</app-card>
