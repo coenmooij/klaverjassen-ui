@@ -6,12 +6,14 @@ import { CreateGameComponent } from './create-game/create-game.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PlayGameComponent } from './play-game/play-game.component';
+import { ViewGameComponent } from './view-game/view-game.component';
 
 const COMPONENTS = [
   CreateGameComponent,
   HomeComponent,
   NotFoundComponent,
-  PlayGameComponent
+  PlayGameComponent,
+  ViewGameComponent
 ];
 
 @NgModule({

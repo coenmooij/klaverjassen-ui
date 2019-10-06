@@ -20,4 +20,9 @@
 <br>
 <h3>Game History</h3>
 <br>
-<app-game-table *ngIf="games.length > 0" [games]="games" (play)="onPlay($event)"></app-game-table>
+<app-game-table
+  *ngIf="games.length > 0"
+  [games]="games"
+  (play)="onPlay($event)"
+  (view)="onView($event)">
+</app-game-table>

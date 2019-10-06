@@ -46,4 +46,8 @@ export class HomeComponent implements OnInit {
     this.gameService.continueGame(id);
     this.router.navigate([Routes.PLAY_GAME]);
   }
+
+  onView(id: number): void {
+    this.router.navigate([Routes.GAMES, id]);
+  }
 }

@@ -5,6 +5,7 @@ import { CreateGameComponent } from '../pages/create-game/create-game.component'
 import { HomeComponent } from '../pages/home/home.component';
 import { NotFoundComponent } from '../pages/not-found/not-found.component';
 import { PlayGameComponent } from '../pages/play-game/play-game.component';
+import { ViewGameComponent } from '../pages/view-game/view-game.component';
 import { Routes } from './routes.enum';
 
 const routes: NgRoutes = [
@@ -13,6 +14,7 @@ const routes: NgRoutes = [
       {path: '', pathMatch: 'full', component: HomeComponent},
       {path: Routes.CREATE_GAME, component: CreateGameComponent},
       {path: Routes.PLAY_GAME, component: PlayGameComponent},
+      {path: Routes.VIEW_GAME, component: ViewGameComponent},
       {path: '**', component: NotFoundComponent}
     ]
   }
