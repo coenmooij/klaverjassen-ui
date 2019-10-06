@@ -1,6 +1,6 @@
 export enum Suit {
-  CLUBS = 'Klaveren',
-  DIAMONDS = 'Ruiten',
-  HEARTS = 'Harten',
-  SPADES = 'Schoppen'
+  CLUBS = 'Clubs',
+  DIAMONDS = 'Diamonds',
+  HEARTS = 'Hearts',
+  SPADES = 'Spades'
 }

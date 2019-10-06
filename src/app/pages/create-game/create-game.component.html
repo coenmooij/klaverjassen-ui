@@ -1,24 +1,26 @@
-<app-card title="Wie spelen er?" subtitle="In volgorde van troef maken (met de klok mee)">
+<app-card
+  title="Who is playing?"
+  subtitle="In order of picking the trump (around the clock).">
   <app-input
-    placeholder="Speler 1"
+    placeholder="Player 1"
     [hasFocus]="focus === 1"
     [(value)]="playerOne"
     (keydown.enter)="focus = 2">
   </app-input>
   <app-input
-    placeholder="Speler 2"
+    placeholder="Player 2"
     [hasFocus]="focus === 2"
     [(value)]="playerTwo"
     (keydown.enter)="focus = 3">
   </app-input>
   <app-input
-    placeholder="Speler 3"
+    placeholder="Player 3"
     [hasFocus]="focus === 3"
     [(value)]="playerThree"
     (keydown.enter)="focus = 4">
   </app-input>
   <app-input
-    placeholder="Speler 4"
+    placeholder="Player 4"
     [hasFocus]="focus === 4"
     [(value)]="playerFour"
     (keydown.enter)="onSubmit()">
@@ -27,12 +29,12 @@
   <hr>
 
   <strong>Team 1:</strong>
-  {{ playerOne ? playerOne : 'Speler 1' }} &
-  {{ playerThree ? playerThree : 'Speler 3' }}
+  {{ playerOne ? playerOne : 'Player 1' }} &
+  {{ playerThree ? playerThree : 'Player 3' }}
   <br>
   <strong>Team 2:</strong>
-  {{ playerTwo ? playerTwo : 'Speler 2' }} &
-  {{ playerFour ? playerFour : 'Speler 4' }}
+  {{ playerTwo ? playerTwo : 'Player 2' }} &
+  {{ playerFour ? playerFour : 'Player 4' }}
 
   <hr>
 

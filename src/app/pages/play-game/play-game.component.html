@@ -12,11 +12,14 @@
     [activePlayerId]="activePlayerId"
     (submitRound)="onSubmitRound($event)">
   </app-score-form>
-  <app-suit-selector [(activeSuit)]="trump"></app-suit-selector>
 
-  <h3>This Turn</h3>
-  <p>Troef: {{ trump }}</p>
-  <p>Who is playing: {{ getActivePlayer() }}</p>
-  <p>Who is dealing: {{ getPreviousPlayer() }}</p>
+  <app-suit-selector [(activeSuit)]="trump"></app-suit-selector>
+  <div class="card">
+    <div class="card-body text-center">
+      <p>Trump: {{ trump }}</p>
+      <p>Active player: {{ getActivePlayer() }}</p>
+      <p>Dealer: {{ getPreviousPlayer() }}</p>
+    </div>
+  </div>
 </ng-container>
 
