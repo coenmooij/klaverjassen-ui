@@ -8,10 +8,10 @@
 
 <ng-container *ngIf="!loading && !hasError">
   <app-scoresheet [game]="game"></app-scoresheet>
-  <app-scoreform
+  <app-score-form
     [activePlayerId]="activePlayerId"
     (submitRound)="onSubmitRound($event)">
-  </app-scoreform>
+  </app-score-form>
 
   <hr>
   <h3>This Turn</h3>

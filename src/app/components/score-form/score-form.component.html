@@ -1,0 +1,6 @@
+<app-honors-form
+  *ngIf="showHonorsForm"
+  [(teamOneHonors)]="round.teamOneHonors"
+  [(teamTwoHonors)]="round.teamTwoHonors"
+  (next)="onSubmitHonors()">
+</app-honors-form>

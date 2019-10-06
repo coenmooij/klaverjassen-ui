@@ -8,9 +8,10 @@ import { ButtonComponent } from './button/button.component';
 import { CardComponent } from './card/card.component';
 import { ErrorComponent } from './error/error.component';
 import { GameTableComponent } from './game-table/game-table.component';
+import { HonorsFormComponent } from './honors-form/honors-form.component';
 import { InputComponent } from './input/input.component';
 import { NumberInputComponent } from './number-input/number-input.component';
-import { ScoreformComponent } from './scoreform/scoreform.component';
+import { ScoreFormComponent } from './score-form/score-form.component';
 import { ScoresheetComponent } from './scoresheet/scoresheet.component';
 
 const COMPONENTS = [
@@ -18,10 +19,11 @@ const COMPONENTS = [
   ButtonComponent,
   CardComponent,
   ErrorComponent,
+  HonorsFormComponent,
   InputComponent,
   GameTableComponent,
   NumberInputComponent,
-  ScoreformComponent,
+  ScoreFormComponent,
   ScoresheetComponent
 ];
 

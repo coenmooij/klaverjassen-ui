@@ -1,17 +1,15 @@
 <div class="table-responsive">
-  <table class="table table-success table-sm">
+  <table class="table table-success table-sm text-center">
     <thead>
     <tr class="bg-success text-light">
       <th>{{ teamOne }}</th>
       <th>{{ game.teamOneScore }}</th>
-      <th>-</th>
       <th>{{ game.teamTwoScore }}</th>
       <th>{{ teamTwo }}</th>
     </tr>
     <tr>
       <th>Roem</th>
       <th>Points</th>
-      <th></th>
       <th>Points</th>
       <th>Roem</th>
     </tr>
@@ -20,7 +18,6 @@
     <tr *ngFor="let round of game.rounds">
       <td>{{ round.teamOneHonors }}</td>
       <td>{{ round.teamOnePoints }}</td>
-      <td>-</td>
       <td>{{ round.teamTwoPoints }}</td>
       <td>{{ round.teamTwoHonors }}</td>
     </tr>
