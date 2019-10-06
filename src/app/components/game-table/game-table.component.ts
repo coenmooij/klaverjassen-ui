@@ -15,9 +15,9 @@ export class GameTableComponent {
 
   columns = [
     'Team 1',
-    'Score',
+    '',
     '-',
-    'Score',
+    '',
     'Team 2',
     ''
   ];

@@ -1,0 +1,8 @@
+<div class="form-group">
+  <input
+    type="number"
+    class="form-control"
+    [step]="increment"
+    [ngModel]="value"
+    (ngModelChange)="onValueChange($event)">
+</div>

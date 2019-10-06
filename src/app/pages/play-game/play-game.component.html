@@ -1,6 +1,3 @@
-<h1>Active Game</h1>
-<hr>
-
 <ng-container *ngIf="hasError">
   <app-error>
     Oops, there is no active game going on at the moment. Create a new game or go back to the overview.
@@ -11,10 +8,13 @@
 
 <ng-container *ngIf="!loading && !hasError">
   <app-scoresheet [game]="game"></app-scoresheet>
-  <app-scoreform (submit)="onSubmitRound($event)"></app-scoreform>
+  <app-scoreform
+    [activePlayerId]="activePlayerId"
+    (submitRound)="onSubmitRound($event)">
+  </app-scoreform>
 
+  <hr>
   <h3>This Turn</h3>
-  <br>
   <p>Troef: {{ trump }}</p>
   <p>Who is playing: {{ getActivePlayer() }}</p>
   <p>Who is dealing: {{ getPreviousPlayer() }}</p>

@@ -9,6 +9,7 @@ import { CardComponent } from './card/card.component';
 import { ErrorComponent } from './error/error.component';
 import { GameTableComponent } from './game-table/game-table.component';
 import { InputComponent } from './input/input.component';
+import { NumberInputComponent } from './number-input/number-input.component';
 import { ScoreformComponent } from './scoreform/scoreform.component';
 import { ScoresheetComponent } from './scoresheet/scoresheet.component';
 
@@ -19,6 +20,7 @@ const COMPONENTS = [
   ErrorComponent,
   InputComponent,
   GameTableComponent,
+  NumberInputComponent,
   ScoreformComponent,
   ScoresheetComponent
 ];

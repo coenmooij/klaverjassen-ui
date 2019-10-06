@@ -1,5 +1,5 @@
 <div class="table-responsive">
-  <table class="table table-striped">
+  <table class="table table-striped table-sm text-center">
     <thead class="thead-dark">
     <tr>
       <th *ngFor="let column of columns">{{ column }}</th>
@@ -7,7 +7,6 @@
     </thead>
     <tbody>
     <tr *ngFor="let game of games">
-
       <td class="align-middle">{{ getTeamOne(game.players) }}</td>
       <td class="align-middle">{{ game.teamOneScore }}</td>
       <td class="align-middle">-</td>
@@ -19,7 +18,7 @@
           icon="play"
           [isSmall]="true"
           (click)="onPlay(game.id)">
-          Continue Game
+          Continue
         </app-button>
         <app-button
           *ngIf="game.rounds.length >= MAX_ROUNDS"
@@ -27,7 +26,7 @@
           [isSmall]="true"
           [isInfo]="true"
           (click)="onView(game.id)">
-          View Game
+          View
         </app-button>
       </td>
     </tr>

@@ -16,7 +16,7 @@ export class PlayGameComponent implements OnInit {
   loading = true;
   hasError = false;
 
-  activePlayer = 0;
+  activePlayerId = 0;
   trump = Suit.HEARTS;
 
   constructor(private gameService: GameService) {
@@ -42,14 +42,14 @@ export class PlayGameComponent implements OnInit {
   }
 
   getActivePlayer(): string {
-    return this.game.players[this.activePlayer];
+    return this.game.players[this.activePlayerId];
   }
 
   getPreviousPlayer(): string {
-    if (this.activePlayer === 0) {
+    if (this.activePlayerId === 0) {
       return this.game.players[3];
     }
-    return this.game.players[this.activePlayer - 1];
+    return this.game.players[this.activePlayerId - 1];
   }
 
   setupGame(): void {
@@ -58,6 +58,6 @@ export class PlayGameComponent implements OnInit {
 
   setActivePlayer(numberOfRounds: number): void {
     const numberOfPlayers = 4;
-    this.activePlayer = numberOfRounds % numberOfPlayers;
+    this.activePlayerId = numberOfRounds % numberOfPlayers;
   }
 }

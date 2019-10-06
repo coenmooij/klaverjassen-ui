@@ -8,6 +8,7 @@
   [routerLink]="route"
   [attr.disabled]="disabled ? 'disabled' : null"
   (click)="onClick($event)">
-  <i *ngIf="icon" class="fa fa-{{ icon }}">&nbsp;</i>
+  <i *ngIf="icon && !iconRight" class="fa fa-{{ icon }}">&nbsp;</i>
   <ng-content></ng-content>
+  <span *ngIf="icon && iconRight">&nbsp;<i class="fa fa-{{ icon }}"></i></span>
 </button>
