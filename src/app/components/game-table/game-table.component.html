@@ -1,35 +1,37 @@
-<table class="table table-striped">
-  <thead class="thead-dark">
-  <tr>
-    <th *ngFor="let column of columns">{{ column }}</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let game of games">
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead class="thead-dark">
+    <tr>
+      <th *ngFor="let column of columns">{{ column }}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let game of games">
 
-    <td class="align-middle">{{ getTeamOne(game.players) }}</td>
-    <td class="align-middle">{{ game.teamOneScore }}</td>
-    <td class="align-middle">-</td>
-    <td class="align-middle">{{ game.teamTwoScore }}</td>
-    <td class="align-middle">{{ getTeamTwo(game.players) }}</td>
-    <td class="align-middle">
-      <app-button
-        *ngIf="game.rounds.length < MAX_ROUNDS"
-        icon="play"
-        [isSmall]="true"
-        (click)="onPlay(game.id)">
-        Continue Game
-      </app-button>
-      <app-button
-        *ngIf="game.rounds.length >= MAX_ROUNDS"
-        icon="eye"
-        [isSmall]="true"
-        [isInfo]="true"
-        (click)="onView(game.id)">
-        View Game
-      </app-button>
-    </td>
-  </tr>
-  </tbody>
-</table>
+      <td class="align-middle">{{ getTeamOne(game.players) }}</td>
+      <td class="align-middle">{{ game.teamOneScore }}</td>
+      <td class="align-middle">-</td>
+      <td class="align-middle">{{ game.teamTwoScore }}</td>
+      <td class="align-middle">{{ getTeamTwo(game.players) }}</td>
+      <td class="align-middle">
+        <app-button
+          *ngIf="game.rounds.length < MAX_ROUNDS"
+          icon="play"
+          [isSmall]="true"
+          (click)="onPlay(game.id)">
+          Continue Game
+        </app-button>
+        <app-button
+          *ngIf="game.rounds.length >= MAX_ROUNDS"
+          icon="eye"
+          [isSmall]="true"
+          [isInfo]="true"
+          (click)="onView(game.id)">
+          View Game
+        </app-button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
 <p class="alert alert-info" *ngIf="games.length === 0">No games yet...</p>

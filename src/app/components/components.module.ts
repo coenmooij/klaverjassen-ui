@@ -7,8 +7,9 @@ import { BarComponent } from './bar/bar.component';
 import { ButtonComponent } from './button/button.component';
 import { CardComponent } from './card/card.component';
 import { ErrorComponent } from './error/error.component';
-import { InputComponent } from './input/input.component';
 import { GameTableComponent } from './game-table/game-table.component';
+import { InputComponent } from './input/input.component';
+import { ScoresheetComponent } from './scoresheet/scoresheet.component';
 
 const COMPONENTS = [
   BarComponent,
@@ -16,7 +17,8 @@ const COMPONENTS = [
   CardComponent,
   ErrorComponent,
   InputComponent,
-  GameTableComponent
+  GameTableComponent,
+  ScoresheetComponent
 ];
 
 @NgModule({

@@ -10,14 +10,7 @@
 </ng-container>
 
 <ng-container *ngIf="!loading && !hasError">
-  <h3>Teams</h3>
-  <p><strong>Team 1:</strong> {{ teamOne }}</p>
-  <p><strong>Team 2:</strong> {{ teamTwo }}</p>
-  <hr>
-
-  <h3>Scoresheet</h3>
-  <p>Current score short overview</p>
-  <p>expand for total scoresheet</p>
+  <app-scoresheet [game]="game"></app-scoresheet>
   <hr>
 
   <h3>This Turn</h3>

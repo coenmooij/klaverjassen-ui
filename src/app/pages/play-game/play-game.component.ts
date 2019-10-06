@@ -15,8 +15,6 @@ export class PlayGameComponent implements OnInit {
   loading = true;
   hasError = false;
 
-  teamOne = '';
-  teamTwo = '';
   activePlayer = 0;
   trump = Suit.HEARTS;
 
@@ -50,13 +48,7 @@ export class PlayGameComponent implements OnInit {
   }
 
   setupGame(): void {
-    this.setTeams(this.game.players);
     this.setActivePlayer(this.game.rounds.length);
-  }
-
-  setTeams(players: string[]): void {
-    this.teamOne = `${players[0]} & ${players[2]}`;
-    this.teamTwo = `${players[1]} & ${players[3]}`;
   }
 
   setActivePlayer(numberOfRounds: number): void {

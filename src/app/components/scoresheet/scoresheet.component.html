@@ -1,0 +1,29 @@
+<div class="table-responsive">
+  <table class="table table-success">
+    <thead>
+    <tr class="bg-success text-light">
+      <th>{{ teamOne }}</th>
+      <th>{{ game.teamOneScore }}</th>
+      <th>-</th>
+      <th>{{ game.teamTwoScore }}</th>
+      <th>{{ teamTwo }}</th>
+    </tr>
+    <tr>
+      <th>Roem</th>
+      <th>Punten</th>
+      <th>-</th>
+      <th>Punten</th>
+      <th>Roem</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let round of game.rounds">
+      <td>{{ round.teamOneHonors }}</td>
+      <td>{{ round.teamOnePoints }}</td>
+      <td>-</td>
+      <td>{{ round.teamTwoPoints }}</td>
+      <td>{{ round.teamTwoHonors }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
