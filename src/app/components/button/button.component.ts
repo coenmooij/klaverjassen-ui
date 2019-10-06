@@ -16,12 +16,12 @@ export class ButtonComponent {
   @Input() isFullWidth = false;
   @Input() iconRight = false;
 
-  @Output() click = new EventEmitter<void>();
+  @Output() buttonClick = new EventEmitter<void>();
 
   onClick(event: MouseEvent): void {
     event.stopPropagation();
     if (!this.disabled) {
-      this.click.emit();
+      this.buttonClick.emit();
     }
   }
 }

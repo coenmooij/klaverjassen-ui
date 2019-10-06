@@ -16,7 +16,7 @@
         icon="calculator"
         [isWarning]="true"
         [isFullWidth]="true"
-        (click)="calculateTeamOne()">
+        (buttonClick)="calculateTeamOne()">
         Calculate
       </app-button>
     </td>
@@ -26,7 +26,7 @@
         icon="calculator"
         [isWarning]="true"
         [isFullWidth]="true"
-        (click)="calculateTeamTwo()">
+        (buttonClick)="calculateTeamTwo()">
         Calculate
       </app-button>
     </td>
@@ -47,7 +47,7 @@
           class="mr-1"
           icon="angle-left"
           [isError]="true"
-          (click)="onBack()">
+          (buttonClick)="onBack()">
           Back
         </app-button>
         <app-button
@@ -55,7 +55,7 @@
           [isInfo]="true"
           [iconRight]="true"
           [disabled]="!isComplete"
-          (click)="onNext()">
+          (buttonClick)="onNext()">
           Next
         </app-button>
       </app-bar>

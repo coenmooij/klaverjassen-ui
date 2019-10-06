@@ -42,7 +42,7 @@
     <app-button class="mr-2" icon="refresh" [route]="cancelRoute" [isError]="true">
       Cancel
     </app-button>
-    <app-button icon="play" [disabled]="!isComplete()" (click)="onSubmit()">
+    <app-button icon="play" [disabled]="!isComplete()" (buttonClick)="onSubmit()">
       Start Game
     </app-button>
   </app-bar>

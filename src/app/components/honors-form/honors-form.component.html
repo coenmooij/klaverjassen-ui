@@ -16,10 +16,10 @@
         icon="minus"
         [isError]="true"
         [disabled]="teamOneHonors < INCREMENT"
-        (click)="onRemoveTeamOneHonors()">
+        (buttonClick)="onRemoveTeamOneHonors()">
         {{ INCREMENT }}
       </app-button>
-      <app-button [iconRight]="true" icon="plus" (click)="onAddTeamOneHonors()">
+      <app-button [iconRight]="true" icon="plus" (buttonClick)="onAddTeamOneHonors()">
         {{ INCREMENT }}
       </app-button>
     </td>
@@ -29,10 +29,10 @@
         icon="minus"
         [isError]="true"
         [disabled]="teamTwoHonors < INCREMENT"
-        (click)="onRemoveTeamTwoHonors()">
+        (buttonClick)="onRemoveTeamTwoHonors()">
         {{ INCREMENT }}
       </app-button>
-      <app-button [iconRight]="true" icon="plus" (click)="onAddTeamTwoHonors()">
+      <app-button [iconRight]="true" icon="plus" (buttonClick)="onAddTeamTwoHonors()">
         {{ INCREMENT }}
       </app-button>
     </td>
@@ -44,7 +44,7 @@
           icon="angle-right"
           [iconRight]="true"
           [isInfo]="true"
-          (click)="onNext()">
+          (buttonClick)="onNext()">
           next
         </app-button>
       </app-bar>

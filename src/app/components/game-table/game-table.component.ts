@@ -8,7 +8,7 @@ import { Game, NUMBER_OF_ROUNDS } from '../../domain/game/game.interface';
 export class GameTableComponent {
   @Input() games: Game[] = [];
 
-  @Output() play = new EventEmitter<number>();
+  @Output() continue = new EventEmitter<number>();
   @Output() view = new EventEmitter<number>();
 
   MAX_ROUNDS = NUMBER_OF_ROUNDS;
@@ -22,8 +22,8 @@ export class GameTableComponent {
     ''
   ];
 
-  onPlay(id: number): void {
-    this.play.emit(id);
+  onContinue(id: number): void {
+    this.continue.emit(id);
   }
 
   onView(id: number): void {

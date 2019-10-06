@@ -17,7 +17,7 @@
           *ngIf="game.rounds.length < MAX_ROUNDS"
           icon="play"
           [isSmall]="true"
-          (click)="onPlay(game.id)">
+          (buttonClick)="onContinue(game.id)">
           Continue
         </app-button>
         <app-button
@@ -25,7 +25,7 @@
           icon="eye"
           [isSmall]="true"
           [isInfo]="true"
-          (click)="onView(game.id)">
+          (buttonClick)="onView(game.id)">
           View
         </app-button>
       </td>
