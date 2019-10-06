@@ -46,6 +46,8 @@ export class PlayGameComponent implements OnInit {
     this.gameService.saveGame(this.game);
     if (this.game.rounds.length >= NUMBER_OF_ROUNDS) {
       this.router.navigate([Routes.GAMES, this.game.id]);
+    } else {
+      this.setActivePlayer(this.game.rounds.length);
     }
   }
 
