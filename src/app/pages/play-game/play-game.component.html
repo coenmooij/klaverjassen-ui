@@ -1,16 +1,29 @@
-<h1>Playing Game</h1>
+<h1>Active Game</h1>
 <hr>
 
-<h3>Teams</h3>
-{{ game.players }}
-<hr>
+<ng-container *ngIf="hasError">
+  <app-error>
+    Oops, there is no active game going on at the moment. Create a new game or go back to the overview.
+  </app-error>
+  <app-button icon="arrow-left" class="mr-2" [isError]="true" route="/">Take me Back</app-button>
+  <app-button icon="plus" [route]="createGameRoute">Create New Game</app-button>
+</ng-container>
 
-<h3>Scoresheet</h3>
-<p>Current score short overview</p>
-<p>expand for total scoresheet</p>
-<hr>
+<ng-container *ngIf="!loading && !hasError">
+  <h3>Teams</h3>
+  <p><strong>Team 1:</strong> {{ teamOne }}</p>
+  <p><strong>Team 2:</strong> {{ teamTwo }}</p>
+  <hr>
 
-<h3>This Turn</h3>
-<p>Who is playing:</p>
+  <h3>Scoresheet</h3>
+  <p>Current score short overview</p>
+  <p>expand for total scoresheet</p>
+  <hr>
 
+  <h3>This Turn</h3>
+  <br>
+  <p>Troef: {{ trump }}</p>
+  <p>Who is playing: {{ getActivePlayer() }}</p>
+  <p>Who is dealing: {{ getPreviousPlayer() }}</p>
+</ng-container>
 

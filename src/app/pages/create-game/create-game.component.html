@@ -37,7 +37,7 @@
   <hr>
 
   <app-bar [alignRight]="true">
-    <app-button class="mr-2" icon="refresh" [route]="cancelRoute" [isRed]="true">
+    <app-button class="mr-2" icon="refresh" [route]="cancelRoute" [isError]="true">
       Cancel
     </app-button>
     <app-button icon="play" [disabled]="!isComplete()" (click)="onSubmit()">

@@ -9,8 +9,10 @@ export class ButtonComponent {
   @Input() icon: string;
   @Input() disabled = false;
   @Input() isSumbit = false;
-  @Input() isRed = false;
-  @Input() isOrange = false;
+  @Input() isSmall = false;
+  @Input() isError = false;
+  @Input() isWarning = false;
+  @Input() isInfo = false;
 
   @Output() click = new EventEmitter<void>();
 

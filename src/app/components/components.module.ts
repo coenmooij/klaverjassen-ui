@@ -6,13 +6,17 @@ import { DirectivesModule } from '../directives/directives.module';
 import { BarComponent } from './bar/bar.component';
 import { ButtonComponent } from './button/button.component';
 import { CardComponent } from './card/card.component';
+import { ErrorComponent } from './error/error.component';
 import { InputComponent } from './input/input.component';
+import { GameTableComponent } from './game-table/game-table.component';
 
 const COMPONENTS = [
   BarComponent,
   ButtonComponent,
   CardComponent,
-  InputComponent
+  ErrorComponent,
+  InputComponent,
+  GameTableComponent
 ];
 
 @NgModule({

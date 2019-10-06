@@ -1,22 +1,23 @@
 <h1>Klaverjassen</h1>
 <hr>
 
-<h3>Continue Game</h3>
-<p>Jump back in and continue where you left off!</p>
-<app-button
-  *ngIf="hasActiveGame"
-  icon="play"
-  [isOrange]="true"
-  [route]="playGameRoute">
-  Continue Game
-</app-button>
-<hr>
+<ng-container *ngIf="hasActiveGame">
+  <h3>Continue Game</h3>
+  <p>Jump back in and continue where you left off!</p>
+  <app-button icon="play" [isWarning]="true" [route]="playGameRoute">
+    Continue Game
+  </app-button>
+  <hr>
+</ng-container>
 
 <h3>Start New Game</h3>
 <br>
 <app-button [route]="createGameRoute" icon="plus">
   New Game
 </app-button>
-<hr>
 
+<hr>
+<br>
 <h3>Game History</h3>
+<br>
+<app-game-table *ngIf="games.length > 0" [games]="games" (play)="onPlay($event)"></app-game-table>

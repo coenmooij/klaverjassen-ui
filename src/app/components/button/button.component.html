@@ -1,10 +1,12 @@
 <button
-  class="btn btn-success"
-  [class.btn-warning]="isOrange"
-  [class.btn-danger]="isRed"
+  class="btn"
+  [class.btn-sm]="isSmall"
+  [class.btn-warning]="isWarning"
+  [class.btn-danger]="isError"
+  [class.btn-primary]="isInfo"
+  [class.btn-success]="!isWarning && !isError && !isInfo"
   [routerLink]="route"
   [attr.disabled]="disabled ? 'disabled' : null"
-  [attr.type]="isSumbit ? 'submit' : null"
   (click)="onClick($event)">
   <i *ngIf="icon" class="fa fa-{{ icon }}">&nbsp;</i>
   <ng-content></ng-content>
