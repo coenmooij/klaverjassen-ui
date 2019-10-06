@@ -4,3 +4,11 @@
   [(teamTwoHonors)]="round.teamTwoHonors"
   (next)="onSubmitHonors()">
 </app-honors-form>
+
+<app-points-form
+  *ngIf="showPointsForm"
+  [activePlayerId]="activePlayerId"
+  [(round)]="round"
+  (back)="onBackToHonors()"
+  (next)="onSubmitRound()">
+</app-points-form>

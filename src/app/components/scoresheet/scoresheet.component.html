@@ -2,10 +2,10 @@
   <table class="table table-success table-sm text-center">
     <thead>
     <tr class="bg-success text-light">
-      <th>{{ teamOne }}</th>
-      <th>{{ game.teamOneScore }}</th>
-      <th>{{ game.teamTwoScore }}</th>
-      <th>{{ teamTwo }}</th>
+      <th class="scoresheet__column">{{ teamOne }}</th>
+      <th class="scoresheet__column">{{ game.teamOneScore }}</th>
+      <th class="scoresheet__column">{{ game.teamTwoScore }}</th>
+      <th class="scoresheet__column">{{ teamTwo }}</th>
     </tr>
     <tr>
       <th>Roem</th>
@@ -15,10 +15,12 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let round of game.rounds">
+    <tr
+      *ngFor="let round of game.rounds; index as index"
+      [class.scoresheet__row--first]="index % 4 === 0">
       <td>{{ round.teamOneHonors }}</td>
-      <td>{{ round.teamOnePoints }}</td>
-      <td>{{ round.teamTwoPoints }}</td>
+      <td><strong>{{ round.teamOnePoints }}</strong></td>
+      <td><strong>{{ round.teamTwoPoints }}</strong></td>
       <td>{{ round.teamTwoHonors }}</td>
     </tr>
     </tbody>

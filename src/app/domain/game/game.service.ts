@@ -49,4 +49,13 @@ export class GameService {
     const game = this.store.getGame(activeGameId);
     return of(game);
   }
+
+  saveGame(game: Game): void {
+    this.store.saveGame(game);
+  }
+
+  getGame(id: number): Observable<Game> {
+    const game = this.store.getGame(id);
+    return of(game);
+  }
 }

@@ -13,6 +13,7 @@ export class ButtonComponent {
   @Input() isError = false;
   @Input() isWarning = false;
   @Input() isInfo = false;
+  @Input() isFullWidth = false;
   @Input() iconRight = false;
 
   @Output() click = new EventEmitter<void>();

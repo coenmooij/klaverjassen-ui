@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { GameFactory } from '../../domain/game/game.factory';
 import { Round } from '../../domain/game/round.interface';
 
 @Component({
@@ -13,25 +14,22 @@ export class ScoreFormComponent {
   showHonorsForm = true;
   showPointsForm = false;
 
-  teamOneIdList = [0, 1];
-  teamTwoIdList = [1, 3];
-
-  hasError = false;
-
-  round: Round = {
-    teamOneHonors: 0,
-    teamOnePoints: 0,
-    teamTwoHonors: 0,
-    teamTwoPoints: 0,
-    nat: false,
-    pit: false
-  };
-
-  onCheckScore(): void {
-  }
+  round: Round = GameFactory.newRound();
 
   onSubmitHonors(): void {
     this.showHonorsForm = false;
     this.showPointsForm = true;
+  }
+
+  onBackToHonors(): void {
+    this.showPointsForm = false;
+    this.showHonorsForm = true;
+  }
+
+  onSubmitRound(): void {
+    this.submitRound.emit(this.round);
+    this.showPointsForm = false;
+    this.showHonorsForm = true;
+    this.round = GameFactory.newRound();
   }
 }

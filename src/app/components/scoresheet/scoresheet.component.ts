@@ -3,7 +3,8 @@ import { Game } from '../../domain/game/game.interface';
 
 @Component({
   selector: 'app-scoresheet',
-  templateUrl: 'scoresheet.component.html'
+  templateUrl: 'scoresheet.component.html',
+  styleUrls: ['scoresheet.component.scss']
 })
 export class ScoresheetComponent implements OnInit {
   @Input() game: Game;

@@ -5,4 +5,5 @@ export interface Round {
   teamTwoHonors: number;
   nat: boolean;
   pit: boolean;
+  tegenpit: boolean;
 }

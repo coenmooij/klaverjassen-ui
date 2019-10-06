@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Game } from '../../domain/game/game.interface';
+import { Router } from '@angular/router';
+import { Game, NUMBER_OF_ROUNDS } from '../../domain/game/game.interface';
 import { GameService } from '../../domain/game/game.service';
 import { Round } from '../../domain/game/round.interface';
 import { Suit } from '../../domain/game/suit.enum';
@@ -19,7 +20,8 @@ export class PlayGameComponent implements OnInit {
   activePlayerId = 0;
   trump = Suit.HEARTS;
 
-  constructor(private gameService: GameService) {
+  constructor(private gameService: GameService,
+              private router: Router) {
   }
 
   ngOnInit(): void {
@@ -38,7 +40,13 @@ export class PlayGameComponent implements OnInit {
   }
 
   onSubmitRound(round: Round): void {
-    // TODO : Implement
+    this.game.rounds.push(round);
+    this.game.teamOneScore += round.teamOnePoints;
+    this.game.teamTwoScore += round.teamTwoPoints;
+    this.gameService.saveGame(this.game);
+    if (this.game.rounds.length >= NUMBER_OF_ROUNDS) {
+      this.router.navigate([Routes.GAMES, this.game.id]);
+    }
   }
 
   getActivePlayer(): string {

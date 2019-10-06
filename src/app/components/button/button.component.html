@@ -5,6 +5,7 @@
   [class.btn-danger]="isError"
   [class.btn-primary]="isInfo"
   [class.btn-success]="!isWarning && !isError && !isInfo"
+  [class.btn-block]="isFullWidth"
   [routerLink]="route"
   [attr.disabled]="disabled ? 'disabled' : null"
   (click)="onClick($event)">

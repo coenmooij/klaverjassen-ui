@@ -6,7 +6,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class NumberInputComponent {
   @Input() value: number;
-  @Input() increment = 1;
 
   @Output() valueChange = new EventEmitter<number>();
 

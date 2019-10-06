@@ -1,0 +1,65 @@
+<table class="table table-dark table-sm table-borderless">
+  <thead class="text-center">
+  <tr>
+    <th colspan="2">Points</th>
+  </tr>
+  <tr>
+    <th>Roem: {{ round.teamOneHonors }}</th>
+    <th>Roem: {{ round.teamTwoHonors }}</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class="text-center">
+    <td>
+      <app-number-input [(value)]="teamOnePoints"></app-number-input>
+      <app-button
+        icon="calculator"
+        [isWarning]="true"
+        [isFullWidth]="true"
+        (click)="calculateTeamOne()">
+        Calculate
+      </app-button>
+    </td>
+    <td>
+      <app-number-input [(value)]="teamTwoPoints"></app-number-input>
+      <app-button
+        icon="calculator"
+        [isWarning]="true"
+        [isFullWidth]="true"
+        (click)="calculateTeamTwo()">
+        Calculate
+      </app-button>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="pt-3 pb-3">
+      <app-info *ngIf="!hasError && isComplete">
+        <span *ngIf="round.tegenpit">Opponent won with a TEGENPIT!</span>
+        <span *ngIf="round.nat">Player went NAT</span>
+        <span *ngIf="round.pit">Active team won with a PIT!</span>
+        <span *ngIf="!round.pit && !round.tegenpit && !round.nat">Round won by active team.</span>
+      </app-info>
+      <app-error *ngIf="hasError">
+        Total number of points has to be between 0 and 162.
+      </app-error>
+      <app-bar [alignCenter]="true">
+        <app-button
+          class="mr-1"
+          icon="angle-left"
+          [isError]="true"
+          (click)="onBack()">
+          Back
+        </app-button>
+        <app-button
+          icon="angle-right"
+          [isInfo]="true"
+          [iconRight]="true"
+          [disabled]="!isComplete"
+          (click)="onNext()">
+          Next
+        </app-button>
+      </app-bar>
+    </td>
+  </tr>
+  </tbody>
+</table>
