@@ -12,8 +12,8 @@
     [activePlayerId]="activePlayerId"
     (submitRound)="onSubmitRound($event)">
   </app-score-form>
+  <app-suit-selector [(activeSuit)]="trump"></app-suit-selector>
 
-  <hr>
   <h3>This Turn</h3>
   <p>Troef: {{ trump }}</p>
   <p>Who is playing: {{ getActivePlayer() }}</p>

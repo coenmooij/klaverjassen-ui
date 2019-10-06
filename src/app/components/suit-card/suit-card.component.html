@@ -1,0 +1,8 @@
+<div
+  class="suit-card"
+  [class.suit-card--active]="isActive">
+  <span *ngIf="suit === Suit.SPADES">&#9824;</span>
+  <span *ngIf="suit === Suit.CLUBS">&#9827;</span>
+  <span class="suit-card__icon--red" *ngIf="suit === Suit.DIAMONDS">&#9830;</span>
+  <span class="suit-card__icon--red" *ngIf="suit === Suit.HEARTS">&#9829;</span>
+</div>

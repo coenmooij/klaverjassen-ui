@@ -1,0 +1,19 @@
+.suit-card {
+  display: inline-block;
+  border: 1px solid #232323;
+  padding: 1rem;
+  font-size: 40px;
+  border-radius: 5px;
+}
+
+.suit-card:hover {
+  cursor: pointer;
+}
+
+.suit-card--active {
+  background-color: #eee;
+}
+
+.suit-card__icon--red {
+  color: red;
+}

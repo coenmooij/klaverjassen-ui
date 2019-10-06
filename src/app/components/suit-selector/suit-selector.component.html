@@ -1,0 +1,9 @@
+<table class="table table-sm text-center table-borderless">
+  <td *ngFor="let suit of Suits">
+    <app-suit-card
+      [isActive]="activeSuit === suit"
+      [suit]="suit"
+      (click)="onActiveSuitChange(suit)">
+    </app-suit-card>
+  </td>
+</table>

@@ -15,6 +15,8 @@ import { NumberInputComponent } from './number-input/number-input.component';
 import { PointsFormComponent } from './points-form/points-form.component';
 import { ScoreFormComponent } from './score-form/score-form.component';
 import { ScoresheetComponent } from './scoresheet/scoresheet.component';
+import { SuitCardComponent } from './suit-card/suit-card.component';
+import { SuitSelectorComponent } from './suit-selector/suit-selector.component';
 
 const COMPONENTS = [
   BarComponent,
@@ -28,7 +30,9 @@ const COMPONENTS = [
   NumberInputComponent,
   PointsFormComponent,
   ScoreFormComponent,
-  ScoresheetComponent
+  ScoresheetComponent,
+  SuitCardComponent,
+  SuitSelectorComponent
 ];
 
 @NgModule({
