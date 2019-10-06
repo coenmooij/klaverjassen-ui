@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Game } from '../../domain/game/game.interface';
 import { GameService } from '../../domain/game/game.service';
+import { Round } from '../../domain/game/round.interface';
 import { Suit } from '../../domain/game/suit.enum';
 import { Routes } from '../../routing/routes.enum';
 
@@ -34,6 +35,10 @@ export class PlayGameComponent implements OnInit {
           this.loading = false;
         }
       );
+  }
+
+  onSubmitRound(round: Round): void {
+    // TODO : Implement
   }
 
   getActivePlayer(): string {

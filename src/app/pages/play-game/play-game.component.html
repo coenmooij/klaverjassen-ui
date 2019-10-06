@@ -11,7 +11,7 @@
 
 <ng-container *ngIf="!loading && !hasError">
   <app-scoresheet [game]="game"></app-scoresheet>
-  <hr>
+  <app-scoreform (submit)="onSubmitRound($event)"></app-scoreform>
 
   <h3>This Turn</h3>
   <br>
