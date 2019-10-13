@@ -5,3 +5,11 @@
 tr.scoresheet__row--first {
   border-top: 2px solid green;
 }
+
+td.scoresheet__cell--has-points {
+  font-weight: bold;
+}
+
+td.scoresheet__cell--has-status {
+  color: red;
+}

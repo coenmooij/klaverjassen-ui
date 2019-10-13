@@ -19,8 +19,16 @@
       *ngFor="let round of game.rounds; index as index"
       [class.scoresheet__row--first]="index % 4 === 0">
       <td>{{ round.teamOneHonors }}</td>
-      <td><strong>{{ round.teamOnePoints }}</strong></td>
-      <td><strong>{{ round.teamTwoPoints }}</strong></td>
+      <td
+        [class.scoresheet__cell--has-points]="round.teamOnePoints > 0"
+        [class.scoresheet__cell--has-status]="round.teamOnePoints === 0">
+        {{ getTeamScore(1, index, round) }}
+      </td>
+      <td
+        [class.scoresheet__cell--has-points]="round.teamTwoPoints > 0"
+        [class.scoresheet__cell--has-status]="round.teamTwoPoints === 0">
+        {{ getTeamScore(2, index, round) }}
+      </td>
       <td>{{ round.teamTwoHonors }}</td>
     </tr>
     </tbody>
