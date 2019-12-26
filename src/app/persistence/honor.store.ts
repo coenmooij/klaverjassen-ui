@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Game } from '../domain/game/game.interface';
 import { Store } from './store';
 
 @Injectable({
@@ -20,6 +19,11 @@ export class HonorStore {
   setHonor(team: number, honor: number): void {
     const key = this.getTeamHonorKey(team);
     this.store.set(key, String(honor));
+  }
+
+  resetHonor(): void {
+    this.setHonor(1, 0);
+    this.setHonor(2, 0);
   }
 
   private getTeamHonorKey(team: number): string {

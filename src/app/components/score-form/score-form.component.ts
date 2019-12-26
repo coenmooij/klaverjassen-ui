@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { GameFactory } from '../../domain/game/game.factory';
 import { Round } from '../../domain/game/round.interface';
+import { HonorStore } from '../../persistence/honor.store';
 
 @Component({
   selector: 'app-score-form',
@@ -16,6 +17,9 @@ export class ScoreFormComponent {
 
   round: Round = GameFactory.newRound();
 
+  constructor(private honorStore: HonorStore) {
+  }
+
   onSubmitHonors(): void {
     this.showHonorsForm = false;
     this.showPointsForm = true;
@@ -29,6 +33,7 @@ export class ScoreFormComponent {
   onSubmitRound(): void {
     this.submitRound.emit(this.round);
     this.showPointsForm = false;
+    this.honorStore.resetHonor();
     this.showHonorsForm = true;
     this.round = GameFactory.newRound();
   }
